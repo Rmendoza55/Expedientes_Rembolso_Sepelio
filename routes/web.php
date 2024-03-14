@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('template');
+    return view('panel.index');
 });
+
+Route::view('/panel','panel.index')->name('panel');
