@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::view('/panel','panel.index')->name('panel');
+
+Route::view('/registro_sepelios','panel.registro_sepelios')->name('registro_sepelios');
