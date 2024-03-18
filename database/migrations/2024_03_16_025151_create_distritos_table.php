@@ -17,7 +17,8 @@ return new class extends Migration
             
             $table->id();
             $table->string('nombre_distrito',255);
-            $table->foreignId('id_provincia')->constrained('provincias')->onDelete('set null');
+            $table->unsignedBigInteger('id_provincia')->unique()->nullable();
+            $table->foreign('id_provincia')->references('id')->on('provincias')->onDelete('set null');
             $table->timestamps();
 
         });
