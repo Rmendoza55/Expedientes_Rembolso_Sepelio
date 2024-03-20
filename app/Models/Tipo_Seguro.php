@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Tipo_Seguro extends Model
 {
     use HasFactory;
+
+    public function fallecido(){
+        return $this->hasOne('App\Models\Fallecido');
+    }
 }

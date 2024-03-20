@@ -17,7 +17,7 @@ return new class extends Migration
             
             $table->id();
             $table->string('tipo_familia',20);
-            $table->unsignedBigInteger('id_grado')->unique();
+            $table->unsignedBigInteger('id_grado');
             $table->foreign('id_grado')->references('id')->on('grados')->onDelete('cascade');
             $table->timestamps();
 

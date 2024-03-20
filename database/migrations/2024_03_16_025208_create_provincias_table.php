@@ -17,8 +17,11 @@ return new class extends Migration
             
             $table->id();
             $table->string('nombre_provincia',255);
-            $table->unsignedBigInteger('id_departamento')->unique()->nullable();
-            $table->foreign('id_departamento')->references('id')->on('departamentos')->onDelete('set null');
+            $table->unsignedBigInteger('id_departamentos');
+            $table->foreign('id_departamentos')
+                ->references('id')
+                ->on('departamentos')
+                ->onDelete('cascade');
             $table->timestamps();
 
         });

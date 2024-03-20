@@ -16,14 +16,39 @@ return new class extends Migration
         Schema::create('sepelios', function (Blueprint $table) {
 
             $table->id();
-            $table->foreignId('id_distrito')->constrained('distritos')->onDelete('set null');
+            $table->unsignedBigInteger('id_distrito')
+                    ->nullable();
+            $table->foreign('id_distrito')
+                    ->references('id')
+                    ->on('distritos')
+                    ->onDelete('set null');
             $table->string('fecha_presentacion',15);
-            $table->foreignId('id_ipress')->constrained('ipresses')->onDelete('cascade');
-            $table->foreignId('id_acreditado')->constrained('acreditados')->onDelete('set null');
-            $table->foreignId('id_fallecido')->constrained('fallecidos')->onDelete('cascade');
+            $table->unsignedBigInteger('id_ipress')
+                    ->nullable();
+            $table->foreign('id_ipress')
+                    ->references('id')
+                    ->on('ipresses')
+                    ->onDelete('set null');
+            $table->unsignedBigInteger('id_acreditado')
+                    ->nullable();
+            $table->foreign('id_acreditado')
+                    ->references('id')
+                    ->on('acreditados')
+                    ->onDelete('set null');
+            $table->unsignedBigInteger('id_fallecido')
+                    ->unique();
+            $table->foreign('id_fallecido')
+                    ->references('id')
+                    ->on('fallecidos')
+                    ->onDelete('cascade');
             $table->string('importe',10);
             $table->string('comprobante',20);
-            $table->foreignId('id_usuario')->constrained('usuarios')->onDelete('cascade');
+            $table->unsignedBigInteger('id_usuario')
+                    ->nullable();
+            $table->foreign('id_usuario')
+                    ->references('id')
+                    ->on('usuarios')
+                    ->onDelete('set null');
             $table->tinyInteger('estado')->default(1);
             $table->timestamps();
 
