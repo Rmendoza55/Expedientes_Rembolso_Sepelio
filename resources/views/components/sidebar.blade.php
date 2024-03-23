@@ -31,12 +31,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <!--<i class="fas fa-fw fa-cog"></i>-->
-            <img src="img/img-project/address-book-solid.svg" alt="" style="width: 10%; height: auto;)">
+            <img src="img/img-project/address-book-solid.svg" alt="" style="width: 10%; height: auto;">
             <span>Sepelios</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-1 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('registro_sepelios') }}">Registrar Sepelios</a>
+                <a class="collapse-item" href="{{ route('sepelios.index') }}">Registrar Sepelios</a>
             </div>
         </div>
     </li>

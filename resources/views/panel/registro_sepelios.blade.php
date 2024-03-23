@@ -22,7 +22,7 @@
             <h6 class="m-0 font-weight-bold text-info">Expedientes de Sepelio</h6>
         </div>
         <div style="margin-top: 1%; margin-left: 1%">
-            <a href="#" class=" btn  btn-info shadow-sm"><i
+            <a href="{{ route('crear_sepelio') }}" class=" btn  btn-info shadow-sm"><i
                     class="fas fa-plus fa-sm text-white-50"></i> Registrar Nuevo Sepelio</a>
         </div>
         <div class="card-body">

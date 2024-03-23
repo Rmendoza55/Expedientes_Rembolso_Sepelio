@@ -11,14 +11,14 @@ class Departamento extends Model
 
 
     public function provincias(){
-        return $this->hasMany('App/Models/Provincia');
+        return $this->hasMany('App\Models\Provincia');
     }
 
     public function acreditados(){
-        return $this->hasMany('App/Models/Acreditado');
+        return $this->hasMany('App\Models\Acreditado');
     }
 
     public function fallecidos(){
-        return $this->hasMany('App/Models/Fallecido');
+        return $this->hasMany('App\Models\Fallecido');
     }
 }
